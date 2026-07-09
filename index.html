@@ -1,57 +1,31 @@
-/* DESIGN BARU: NAVIGATION BAR BIRU TOSKA BERMOTIF MODERN */
+/* RESTRUKTURISASI HEADER: SPANDUK VISUAL PENUH */
 header {
-    /* Menggunakan paduan gradasi warna biru toska (Teal/Turquoise) dengan motif garis halus */
-    background-color: #008080; /* Warna dasar Toska */
-    background-image: 
-        repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 10px),
-        linear-gradient(135deg, #0d9488 0%, #115e59 100%); 
-    border-bottom: 2px solid #14b8a6;
-    padding: 10px 0;
+    width: 100%;
+    background-color: #121b2e; /* Warna dasar cadangan saat memuat */
+    border-bottom: 2px solid #334155;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.brand-logo-area {
-    display: flex;
-    align-items: center;
-}
-
-/* Mengatur ukuran logo di dalam navigasi agar presisi dan tidak merusak layout */
-.brand-logo-img {
-    height: 45px; 
-    width: auto;
+.header-banner-link {
     display: block;
-    object-fit: contain;
-}
-
-nav {
-    display: flex;
-    gap: 30px;
-}
-
-/* Tulisan menu navigasi warna putih bersih */
-nav a {
+    width: 100%;
     text-decoration: none;
-    color: #ffffff; 
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
-    padding: 5px 10px;
-    border-radius: 4px;
+    cursor: pointer;
 }
 
-/* Efek saat menu disorot (hover) */
-nav a:hover { 
-    color: #ccfbf1; /* Putih toska terang */
-    background-color: rgba(255, 255, 255, 0.15);
+.header-banner-img {
+    width: 100%;
+    max-width: 1200px; /* Menyesuaikan batas maksimal kontainer dashboard di bawahnya */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    header {
+        position: relative; /* Menghindari penumpukan layar pada perangkat seluler */
+    }
 }
