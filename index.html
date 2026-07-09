@@ -1,31 +1,23 @@
-/* RESTRUKTURISASI HEADER: SPANDUK VISUAL PENUH */
+/* HEADER BANNER PENUH (DESAIN PERTAMA YANG ANDA MAKSUD) */
 header {
     width: 100%;
-    background-color: #121b2e; /* Warna dasar cadangan saat memuat */
-    border-bottom: 2px solid #334155;
-    position: sticky;
-    top: 0;
+    background-color: #0f172a; /* Warna dasar gelap yang selaras saat proses memuat */
+    position: relative;
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.header-banner-link {
+.main-header-banner {
     display: block;
     width: 100%;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.header-banner-img {
-    width: 100%;
-    max-width: 1200px; /* Menyesuaikan batas maksimal kontainer dashboard di bawahnya */
-    height: auto;
-    display: block;
+    max-width: 1200px; /* Lebarnya sejajar sempurna dengan batas dashboard di bawahnya */
     margin: 0 auto;
+    height: auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
+/* Penyesuaian responsif agar spanduk mengecil proporsional di layar handphone */
 @media (max-width: 768px) {
-    header {
-        position: relative; /* Menghindari penumpukan layar pada perangkat seluler */
+    .main-header-banner {
+        width: 100%;
     }
 }
