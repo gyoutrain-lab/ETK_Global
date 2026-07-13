@@ -3,335 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETK Global - Integrated Executive Portal & Portfolio</title>
     
-    <!-- GOOGLE SEARCH CONSOLE INTEGRATION VERIFICATION -->
-    <meta name="google-site-verification" content="MASUKKAN_KODE_VERIFIKASI_GOOGLE_DI_SINI" />
-
-    <!-- FAVICON INTEGRATION LINKS -->
+    <!-- Integrasi Favicon -->
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="manifest" href="site.webmanifest" />
 
-    <!-- SEO META ARCHITECTURE -->
-    <title>Kursus IELTS Band 9 Yogyakarta & English Korporat - ETK Global</title>
-    <meta name="description" content="Kursus IELTS terbaik di Yogyakarta & pelatihan English korporat. Hubungi ETK Global Yogyakarta untuk akselerasi Band 9 dengan metode PPS eksekutif serta silabus lengkap kelas korporat, Prometric, dan komunikasi bisnis.">
-    <meta name="keywords" content="kursus ielts yogyakarta, ielts band 9 jogja, english for job interview jogja, pelatihan bahasa inggris korporat yogyakarta, silabus english corporate, prometric nurse jogja">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#0b1329">
-    
-    <link rel="canonical" href="https://gyoutrain-lab.github.io/ETKGlobal/">
-
-    <!-- OPEN GRAPH SOCIAL METADATA -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://gyoutrain-lab.github.io/ETKGlobal/">
-    <meta property="og:title" content="Kursus IELTS Band 9 Yogyakarta & English Korporat | ETK Global">
-    <meta property="og:description" content="Lembaga pelatihan bahasa Inggris korporat dengan pendekatan PPS, akselerasi IELTS Band 9, dan transformasi karir global di Yogyakarta.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/header_cr.jpg">
-
-    <!-- JSON-LD STRUCTURED SCHEMA MARKUP -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "ETK Global Yogyakarta",
-      "description": "Pusat akselerasi komunikasi bisnis, kursus persiapan IELTS Band 9, dan pelatihan Prometric Nursing Test di Yogyakarta.",
-      "url": "https://gyoutrain-lab.github.io/ETKGlobal/",
-      "logo": "https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/logo_etk_cr.png",
-      "telephone": "+62-819-0168-5253",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Panjen Tajem, Maguwoharjo, Depok",
-        "addressLocality": "Sleman",
-        "addressRegion": "Daerah Istimewa Yogyakarta",
-        "postalCode": "55281",
-        "addressCountry": "ID"
-      }
-    }
-    </script>
-
-    <!-- MASTER USER INTERFACE STYLESHEET (CSS) -->
     <style>
+        /* --- BASE & VARIABLES --- */
+        :root {
+            --maroon-red: #800020;
+            --pale-purple: #b19cd9;
+            --black-purple-dark: #12021c;
+            --black-purple-light: #2a083d;
+            --navbar-height: 80px;
+            
+            /* Sub-domain Assets Color */
+            --teal-main: #0d9488;
+            --teal-dark: #115e59;
+            --teal-light: #14b8a6;
+            --dark-blue-bg: #0b1329;
+            --card-slate: #1e293b;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         body {
-            background-color: #0b1329; 
-            color: #cbd5e1;
+            background-color: #f8fafc;
+            color: #334155;
             line-height: 1.7;
+            padding-top: var(--navbar-height);
         }
+
         .container {
             width: 92%;
             max-width: 1240px;
             margin: 0 auto;
-            position: relative;
         }
 
-        /* NAVIGATION & HEADER ARCHITECTURE */
-        header {
-            position: sticky;
+        /* --- 3D NAVIGATION BAR STYLING --- */
+        .etk-navbar {
+            position: fixed;
             top: 0;
-            z-index: 999; 
-            box-shadow: 0 10px 35px rgba(0,0,0,0.6); 
-        }
-        .header-problem-banner {
-            background-color: #dc2626; 
-            padding: 14px 0;
-            text-align: center;
-        }
-        .problem-banner-text {
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 800;
-        }
-        .problem-banner-text .gold-trigger {
-            color: #facc15; 
-            font-size: 18px;
-            font-weight: 900;
-        }
-        .header-main-bar {
-            background: linear-gradient(135deg, #0d9488 0%, #115e59 100%); 
-            border-bottom: 2px solid #14b8a6;
-            padding: 25px 0; 
-            position: relative;
-            overflow: visible; 
-        }
-        .header-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo-solution-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            position: relative;
-            min-width: 380px; 
-            z-index: 10; 
-        }
-        .logo img {
-            height: 90px; 
-            width: auto;
-            position: absolute;
-            top: -45px; 
             left: 0;
-            z-index: 12;
-        }
-        .solution-callout {
+            width: 100%;
+            height: var(--navbar-height);
             display: flex;
-            flex-direction: column;
-            margin-left: 110px;
-        }
-        .solution-tag {
-            font-size: 10px;
-            text-transform: uppercase;
-            font-weight: 900;
-            color: #ffffff; 
-            background-color: #ef4444; 
-            padding: 3px 8px;
-            border-radius: 4px;
-            align-self: flex-start;
-        }
-        .solution-text {
-            color: #facc15; 
-            font-size: 14px;
-            font-weight: 800;
-        }
-        .solution-text span {
-            font-weight: 400;
-            color: #e2fbf7;
-        }
-        nav {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            min-height: 40px;
             align-items: center;
-            justify-content: flex-end; 
-        }
-        nav a, nav button {
-            text-decoration: none;
-            color: #e2fbf7; 
-            font-weight: 700; 
-            font-size: 14px; 
-            padding: 10px 16px;
-            border-radius: 8px;
-            background: linear-gradient(180deg, #253a66 0%, #121f3d 100%);
-            border-top: 1px solid #3d5a99;
-            border-left: 1px solid #253a66;
-            border-right: 1px solid #253a66;
-            box-shadow: 
-                0 4px 0px #0a1224, 
-                0 6px 15px rgba(0, 0, 0, 0.5),
-                inset 0 1px 2px rgba(255, 255, 255, 0.15);
-            text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.7);
-            transition: all 0.15s cubic-bezier(0.2, 0.8, 0.2, 1);
-            position: relative;
-            z-index: 20; 
-            cursor: pointer;
-        }
-        nav a:hover, nav button:hover { 
-            color: #ffffff;
-            background: linear-gradient(180deg, #2d477c 0%, #17284e 100%);
-            box-shadow: 
-                0 5px 0px #0a1224, 
-                0 8px 20px rgba(0, 0, 0, 0.6),
-                inset 0 1px 2px rgba(255, 255, 255, 0.25);
-            top: -2px; 
-        }
-        nav a:active, nav button:active {
-            top: 3px; 
-            box-shadow: 
-                0 1px 0px #0a1224, 
-                0 2px 5px rgba(0, 0, 0, 0.4),
-                inset 0 1px 4px rgba(0, 0, 0, 0.6);
-        }
-        /* Style Khusus Tombol Navigasi Portofolio Merah Menyala */
-        nav button.portfolio-trigger-btn {
-            background: linear-gradient(180deg, #b91c1c 0%, #7f1d1d 100%);
-            border-top: 1px solid #ef4444;
-            border-left: 1px solid #b91c1c;
-            border-right: 1px solid #b91c1c;
-        }
-        nav button.portfolio-trigger-btn:hover {
-            background: linear-gradient(180deg, #dc2626 0%, #991b1b 100%);
+            justify-content: flex-end;
+            padding-right: 40px;
+            z-index: 1000;
+            background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 100%),
+                        linear-gradient(90deg, var(--maroon-red) 0%, var(--pale-purple) 100%);
+            box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.3), 
+                        inset 0 -3px 6px rgba(0, 0, 0, 0.5), 
+                        0 4px 15px rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* COMPLIANCE BOUNDARY BACKDROP LAYER */
-        .header-bg-backdrop-layer {
+        /* ETK Future Image (Left Rim 0) */
+        .navbar-edge-image {
             position: absolute;
-            left: 0;
             top: 0;
+            left: 0;
             bottom: 0;
-            width: 450px;
-            pointer-events: none;
-            z-index: 1;
-            overflow: hidden;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            z-index: 2;
+            background: linear-gradient(90deg, rgba(128,0,32,0.8) 0%, rgba(128,0,32,0) 100%);
+            padding-right: 20px;
         }
-        .header-bg-backdrop-layer img {
+        .navbar-edge-image img {
             height: 100%;
             width: auto;
             object-fit: cover;
-            object-position: left center;
-            mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 95%);
-            opacity: 0.85; 
         }
 
-        /* VIRTUAL PAGE CONTROLLER */
-        .virtual-page {
+        /* Logo ETK CR (Jarak ~10cm / 380px dari kiri) */
+        .navbar-logo-center {
+            position: absolute;
+            left: 380px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 70%;
+            display: flex;
+            align-items: center;
+            z-index: 3;
+        }
+        .navbar-logo-center img {
+            height: 100%;
+            width: auto;
+        }
+
+        /* Menu Links */
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+        .navbar-menu > li > a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+        .navbar-menu > li > a:hover {
+            color: #facc15;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Dropdown Black Purple (3D Gradation) */
+        .dropdown-trigger {
+            position: relative;
+        }
+        .dropdown-trigger .arrow {
+            font-size: 10px;
+            margin-left: 5px;
+        }
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 15px);
+            left: 0;
+            width: 240px;
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            border-radius: 6px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: linear-gradient(135deg, var(--black-purple-light) 0%, var(--black-purple-dark) 100%);
+            border: 1px solid rgba(177, 156, 217, 0.2);
+            box-shadow: inset 0 1px 1px rgba(255,255,255,0.1), 0 10px 25px rgba(0, 0, 0, 0.6);
+        }
+        .dropdown-trigger:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-menu li a {
+            color: #e0d5ea;
+            text-decoration: none;
+            display: block;
+            padding: 12px 20px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .dropdown-menu li a:hover {
+            background: linear-gradient(90deg, rgba(177, 156, 217, 0.2) 0%, rgba(0,0,0,0) 100%);
+            color: #ffffff;
+            padding-left: 25px;
+        }
+
+        /* --- VIRTUAL PAGES SYSTEM --- */
+        .app-page {
             display: none;
         }
-        .virtual-page.active-page {
+        .app-page.active-page {
             display: block;
         }
 
-        /* HERO VIEWPORT SYSTEM */
-        .hero-split-section {
-            padding: 80px 0; 
-            background: radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.15), transparent 60%);
-        }
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 40px;
-            align-items: center;
-        }
-        .hero-text-side h1 {
-            font-size: 38px;
-            color: #ffffff;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        .problem-hook-badge {
-            display: inline-block;
-            background-color: #dc2626;
-            color: #ffffff;
-            font-weight: 800;
-            font-size: 13px;
-            padding: 4px 12px;
-            border-radius: 4px;
-            margin-bottom: 15px;
-        }
-        .hero-text-side p {
-            font-size: 16px;
-            color: #94a3b8;
-            margin-bottom: 30px;
-        }
-        .hero-banner-img {
+        /* --- HEADER SECTION --- */
+        .etk-header {
+            position: relative;
             width: 100%;
-            height: auto;
-            border-radius: 16px;
-            border: 1px solid #14b8a6;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+            height: 50vh;
+            min-height: 350px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .btn-cta {
-            display: inline-block;
-            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 14px 32px;
-            border-radius: 8px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(18, 2, 28, 0.4) 0%, rgba(18, 2, 28, 0.85) 100%);
+            z-index: 2;
+        }
+        .header-content {
+            position: relative;
+            z-index: 3;
             text-align: center;
+            color: #ffffff;
+            padding: 0 20px;
         }
-        .btn-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(13, 148, 136, 0.4);
+        .header-content h1 {
+            font-size: 3.2rem;
+            margin-bottom: 10px;
+            text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            font-weight: 800;
+        }
+        .header-content p {
+            font-size: 1.3rem;
+            color: var(--pale-purple);
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        /* DASHBOARD ARCHITECTURE */
-        .dashboard-section { padding: 90px 0; background-color: #0b1329; }
-        .section-title { text-align: center; font-size: 34px; color: #ffffff; font-weight: 700; margin-bottom: 12px; }
-        .section-subtitle { text-align: center; color: #94a3b8; margin-bottom: 50px; }
-        .dashboard-vertical-layout { display: grid; grid-template-columns: 280px 1fr; gap: 40px; }
-        .dashboard-tabs-vertical { display: flex; flex-direction: column; gap: 12px; }
-        
-        .tab-btn {
-            background-color: #111c33; color: #94a3b8; border: 1px solid #1e293b;
-            padding: 16px 20px; border-radius: 10px; font-weight: 600; cursor: pointer; text-align: left;
+        /* --- MAIN PAGE: SCENE GRID STYLING --- */
+        .etk-document-container {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--black-purple-dark);
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--maroon-red);
+            border-radius: 2px;
+        }
+        .scene-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .scene-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
-        .tab-btn.active, .tab-btn:hover { background: #0d9488; color: #ffffff; border-color: #14b8a6; }
-        
-        .dashboard-content-panel {
-            background-color: #111c33; border: 1px solid #1e293b;
-            border-radius: 18px; padding: 40px; min-height: 480px;
+        .scene-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(18, 2, 28, 0.15);
         }
-        .tab-panel { display: none; }
-        .tab-panel.active { display: block; }
-        .sub-program-downward-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
-        
-        .sub-card { background-color: #1a263f; border: 1px solid #2e3d59; border-radius: 12px; padding: 24px; }
-        .sub-card-title { color: #ffffff; font-size: 17px; margin-bottom: 12px; font-weight: 700; display: block; }
+        .scene-image-wrapper {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+        }
+        .scene-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .scene-card:hover .scene-image-wrapper img {
+            transform: scale(1.05);
+        }
+        .scene-info {
+            padding: 25px;
+        }
+        .scene-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            padding: 4px 10px;
+            background-color: rgba(128, 0, 32, 0.1);
+            color: var(--maroon-red);
+            border-radius: 20px;
+            margin-bottom: 12px;
+        }
 
-        /* METODOLOGI PPS SECTION */
-        .methodology-section { padding: 90px 0; background-color: #0b1329; border-top: 1px solid #1e293b; }
-        .methodology-card { background-color: #111c33; border: 1px solid #14b8a6; padding: 40px; border-radius: 16px; margin-top: 30px; }
-        .methodology-card h3 { color: #ffffff; font-size: 24px; margin-bottom: 15px; }
-
-        /* PACKAGES GRID */
-        .grid-section { padding: 90px 0; background-color: #0b1329; }
-        .program-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .program-card { background-color: #111c33; padding: 45px 35px; border-radius: 16px; border: 1px solid #1e293b; display: flex; flex-direction: column; justify-content: space-between; }
-        .program-card h2 { font-size: 23px; color: #ffffff; margin-bottom: 15px; }
-        .program-card .price { font-size: 24px; color: #14b8a6; font-weight: 800; margin-bottom: 20px; }
-        .program-card p { margin-bottom: 25px; }
-
-        /* SILABUS KORPORAT SYSTEM ARCHITECTURE */
-        .corporate-syllabus-wrapper {
-            background-color: #0b1329;
-            padding: 90px 0;
-            border-top: 2px solid #1e293b;
+        /* --- ENGLISH CORPORATE PAGE STYLE --- */
+        .corporate-body {
+            background-color: var(--dark-blue-bg);
+            color: #cbd5e1;
+            padding: 60px 0;
+        }
+        .syllabus-hero {
+            padding: 40px 0 60px 0;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(13, 148, 136, 0.15) 0%, transparent 100%);
         }
         .class-badge {
             display: inline-block;
@@ -343,15 +324,36 @@
             padding: 5px 16px;
             border-radius: 50px;
             margin-bottom: 25px;
-            letter-spacing: 1px;
             box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
         }
+        .syllabus-hero h2 {
+            font-size: 42px;
+            color: #ffffff;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        .main-description {
+            max-width: 850px;
+            margin: 0 auto 30px auto;
+            color: #e2e8f0;
+            font-size: 20px;
+        }
+        .program-focus-box {
+            max-width: 750px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px dashed var(--teal-light);
+            padding: 20px;
+            border-radius: 8px;
+            color: #94a3b8;
+        }
+        .program-focus-box strong { color: #ffffff; }
         .section-title-premium {
             font-size: 32px;
             color: #ffffff;
             font-weight: 700;
             margin-bottom: 40px;
-            border-left: 5px solid #14b8a6;
+            border-left: 5px solid var(--teal-light);
             padding-left: 18px;
         }
         .timeline-grid {
@@ -361,8 +363,8 @@
             margin-bottom: 60px;
         }
         .timeline-card {
-            background-color: #111c33;
-            border: 1px solid #1e293b;
+            background-color: var(--card-slate);
+            border: 1px solid #334155;
             border-radius: 12px;
             padding: 35px;
             display: grid;
@@ -370,398 +372,419 @@
             gap: 25px;
             transition: all 0.3s ease;
         }
-        .timeline-card:hover {
-            border-color: #14b8a6;
-            transform: translateX(5px);
-        }
-        .time-tag { color: #14b8a6; font-weight: 800; font-size: 20px; text-transform: uppercase; }
+        .timeline-card:hover { border-color: var(--teal-light); transform: translateX(5px); }
+        .time-tag { color: var(--teal-light); font-weight: 800; font-size: 20px; text-transform: uppercase; }
         .timeline-detail h3 { color: #ffffff; font-size: 22px; margin-bottom: 12px; }
         .timeline-detail ul { margin-left: 20px; color: #94a3b8; margin-top: 10px; }
-        .timeline-detail ul li { margin-bottom: 6px; }
-
-        /* MEDIA & DOCUMENTATION GALLERY */
-        .media-gallery { padding: 90px 0; background-color: #0b1329; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .gallery-item { background-color: #111c33; border-radius: 14px; overflow: hidden; border: 1px solid #1e293b; display: flex; flex-direction: column; }
-        .gallery-item img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; background-color: #0b1329; display: block; }
-        .gallery-caption { padding: 22px; font-size: 14.5px; color: #94a3b8; text-align: center; margin-top: auto; border-top: 1px solid #1e293b; }
-
-        /* INTEGRATED CASE STUDY (PORTFOLIO) STYLING */
-        .portfolio-section {
-            padding: 80px 0;
-            background: linear-gradient(180deg, #0b1329 0%, #060b18 100%);
+        .emodule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
         }
-        .portfolio-box {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #111c33;
-            border: 1px solid #14b8a6;
-            padding: 50px;
-            border-radius: 16px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        .emodule-card {
+            background-color: #111827;
+            border: 1px solid #334155;
+            border-radius: 14px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.3s ease;
         }
-        .portfolio-box h2 {
-            color: #14b8a6;
-            margin-top: 35px;
-            font-size: 22px;
+        .emodule-card:hover { border-color: var(--teal-light); }
+        .module-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
             border-bottom: 1px solid #1e293b;
-            padding-bottom: 8px;
+            padding-bottom: 15px;
         }
-        .portfolio-box ul {
-            margin-left: 22px;
-            margin-top: 12px;
-        }
-        .portfolio-box li {
-            margin-bottom: 10px;
-            color: #94a3b8;
-        }
-        .portfolio-box code {
-            background-color: #060b18;
-            color: #facc15;
-            padding: 3px 8px;
+        .module-header h3 { color: #ffffff; font-size: 22px; }
+        .module-number {
+            font-size: 12px;
+            font-weight: 900;
+            color: var(--teal-light);
+            background-color: rgba(20, 184, 166, 0.1);
+            padding: 5px 12px;
             border-radius: 6px;
+        }
+        .material-block h4 { color: #facc15; font-size: 14px; margin-bottom: 8px; text-transform: uppercase; }
+        .material-block p { color: #94a3b8; margin-bottom: 20px; }
+        .activity-badge {
+            display: inline-block;
+            background-color: #1e293b;
+            color: var(--teal-light);
+            font-size: 13px;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-weight: 700;
+            border: 1px solid rgba(20, 184, 166, 0.2);
+        }
+        .action-bar { text-align: center; padding: 40px 0; }
+        .btn-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(13, 148, 136, 0.3);
+            transition: all 0.2s ease;
+        }
+        .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(13, 148, 136, 0.4); }
+
+        /* --- PORTFOLIO CASE STUDY PAGE STYLE --- */
+        .portfolio-body {
+            background-color: #0f172a;
+            color: #e2e8f0;
+            padding: 60px 0;
+            min-height: 90vh;
+        }
+        .case-study-box {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        .case-study-box h3 {
+            color: #ffffff;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 10px;
+        }
+        .case-study-box h4 {
+            color: #facc15;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .case-study-box ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        .case-study-box li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        .code-snippet {
+            background: #090d16;
+            padding: 20px;
+            border-radius: 8px;
             font-family: 'Courier New', Courier, monospace;
-            font-size: 14px;
-        }
-        .portfolio-intro {
-            color: #e2fbf7;
-            font-size: 16px;
+            font-size: 0.9rem;
+            color: #38bdf8;
+            overflow-x: auto;
+            border-left: 4px solid var(--maroon-red);
             margin-top: 15px;
-            line-height: 1.8;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
         }
 
-        /* FOOTER BRANDING ARCHITECTURE */
-        footer { background-color: #060b18; color: #64748b; padding: 70px 0 35px 0; font-size: 14px; border-top: 1px solid #1e293b; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
-        .footer-info h4 { color: #ffffff; margin-bottom: 20px; font-size: 18px; }
-        .footer-links a { display: block; color: #94a3b8; text-decoration: none; margin-bottom: 10px; }
-        .footer-links a:hover { color: #14b8a6; }
-        .footer-bottom { text-align: center; padding-top: 35px; margin-top: 40px; border-top: 1px solid #1e293b; }
+        /* --- GLOBAL FOOTER --- */
+        footer { 
+            background-color: #060b18; 
+            color: #64748b; 
+            padding: 40px 0; 
+            font-size: 14px; 
+            border-top: 1px solid #1e293b;
+            text-align: center;
+        }
 
-        /* ADVANCED BREAKPOINT RESPONSIVENESS */
+        /* --- RESPONSIVE MOBILE --- */
         @media (max-width: 992px) {
-            .logo img { position: static; height: 100px; margin: 0 auto; }
-            .solution-callout { margin-left: 0; align-items: center; text-align: center; }
-            .logo-solution-wrapper { min-width: auto; flex-direction: column; gap: 10px; }
-            .header-flex { flex-direction: column; gap: 20px; }
-            nav { justify-content: center; gap: 10px; padding-right: 0; }
-            .header-bg-backdrop-layer { display: none; }
-            nav a, nav button { padding: 10px 14px; font-size: 14px; }
-            .hero-grid { grid-template-columns: 1fr; text-align: center; }
-            .dashboard-vertical-layout { grid-template-columns: 1fr; }
-            .timeline-card { grid-template-columns: 1fr; gap: 10px; padding: 25px; }
-            .portfolio-box { padding: 25px; }
+            .navbar-logo-center { left: 140px; }
+            .emodule-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .etk-navbar { padding-right: 15px; }
+            .navbar-menu { gap: 10px; }
+            .navbar-menu > li > a { padding: 6px 10px; font-size: 13px; }
+            .timeline-card { grid-template-columns: 1fr; padding: 25px; }
+            .header-content h1 { font-size: 2.2rem; }
+            .syllabus-hero h2 { font-size: 32px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <!-- TOP ALERT NOTIFICATION HUB -->
-        <div class="header-problem-banner">
-            <div class="container">
-                <div class="problem-banner-text">
-                    Stuck in Local Salary due to English Blocks? Unlock your <span class="gold-trigger">International Career</span> Now!
-                </div>
-            </div>
+    <!-- 3D NAVIGATION BAR WITH INTEGRATED PORTFOLIO LINK -->
+    <nav class="etk-navbar">
+        <div class="navbar-edge-image">
+            <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/etk_future.png" alt="ETK Future">
         </div>
-        
-        <!-- TEAL INTEGRATED NAVIGATION BAR -->
-        <div class="header-main-bar">
-            <!-- BACKGROUND IMAGE LAYER: FIXED TO ZERO EDGE ACCORDING TO PROTOCOL -->
-            <div class="header-bg-backdrop-layer">
-                <img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/etk_future.png" alt="ETK Future Gradient Background Vector Layout">
-            </div>
 
-            <div class="container header-flex">
-                <div class="logo-solution-wrapper">
-                    <div class="logo">
-                        <a href="#" onclick="showVirtualPage('main-application-page')">
-                            <img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/logo_etk_cr.png" alt="ETK Global Kursus Inggris & IELTS Yogyakarta">
-                        </a>
-                    </div>
-                    <div class="solution-callout">
-                        <span class="solution-tag">The Absolute Solution</span>
-                        <div class="solution-text">Akurat, Tepat & Modern <span>untuk Akselerasi Karir Global</span></div>
-                    </div>
-                </div>
-
-                <nav role="navigation" aria-label="Main Business Navigation">
-                    <a href="#dashboard" onclick="showVirtualPage('main-application-page')">Dashboard</a>
-                    <a href="#methodology" onclick="showVirtualPage('main-application-page')">Metodologi PPS</a>
-                    <a href="#packages" onclick="showVirtualPage('main-application-page')">Paket Program</a>
-                    <a href="#corporate-executive-syllabus" onclick="showVirtualPage('main-application-page')">Silabus Korporat</a>
-                    <a href="#dokumentasi" onclick="showVirtualPage('main-application-page')">Documentation</a>
-                    <!-- NAVIGATION TRIGGER UNTUK PORTOFOLIO STUDI KASUS -->
-                    <button class="portfolio-trigger-btn" onclick="showVirtualPage('portfolio-case-study-page')">💼 Portfolio Case Study</button>
-                </nav>
-            </div>
+        <div class="navbar-logo-center">
+            <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/logo_etk_cr.png" alt="ETK Global Logo">
         </div>
-    </header>
 
-    <!-- ========================================== -->
-    <!-- VIRTUAL PAGE 1: HALAMAN UTAMA APLIKASI WEB -->
-    <!-- ========================================== -->
-    <div id="main-application-page" class="virtual-page active-page">
-        <!-- CONVERTED HERO SECTION HERO BANNER -->
-        <section class="hero-split-section">
-            <div class="container hero-grid">
-                <div class="hero-text-side">
-                    <div class="problem-hook-badge">Fakta Kegagalan Karir Global</div>
-                    <h1>Kalah Negosiasi Bisnis & Gagal Tes Internasional Karena Hambatan Struktur Bahasa?</h1>
-                    <p>ETK Global Yogyakarta hadir sebagai solusi mutlak: mengintegrasikan pendekatan Persuasive Positioning System (PPS) untuk mengamankan akselerasi target skor kursus IELTS Band 9 serta penguasaan strategi pelatihan bahasa Inggris bisnis korporat di Yogyakarta.</p>
-                    <a href="#dashboard" class="btn-cta">Akses Portal Dashboard Program</a>
+        <ul class="navbar-menu">
+            <li><a href="javascript:void(0)" onclick="switchPage('main-application-page')">Home</a></li>
+            <li class="dropdown-trigger">
+                <a href="javascript:void(0)">Programs <span class="arrow">▼</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="javascript:void(0)" onclick="switchPage('corporate-english-page')">English Corporate</a></li>
+                    <li><a href="javascript:void(0)" onclick="switchPage('main-application-page')">Global Infrastructure</a></li>
+                </ul>
+            </li>
+            <!-- Case Study Portfolio Menu Link -->
+            <li><a href="javascript:void(0)" onclick="switchPage('portfolio-case-study-page')">Case Study Portfolio</a></li>
+            <li><a href="javascript:void(0)">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- ================= PAGE 1: MAIN LANDING PAGE ================= -->
+    <div id="main-application-page" class="app-page active-page">
+        <header class="etk-header">
+            <div class="header-overlay"></div>
+            <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/header_cr.jpg" alt="ETK Global Header" class="header-bg">
+            <div class="header-content">
+                <h1>Welcome to ETK Global</h1>
+                <p>Navigating the Future of Global Innovation & Technology</p>
+            </div>
+        </header>
+
+        <main class="etk-document-container">
+            <div class="section-title">
+                <h2>Project Documentation & Scenes</h2>
+                <p>Visual breakdown of core architectural layouts and operational environments.</p>
+            </div>
+
+            <div class="scene-grid">
+                <div class="scene-card">
+                    <div class="scene-image-wrapper">
+                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/scene1.png" alt="ETK Scene 1">
+                    </div>
+                    <div class="scene-info">
+                        <span class="scene-tag">Phase 01</span>
+                        <h3>System Architecture Layout</h3>
+                        <p>This document illustrates the initial infrastructure mapping and operational workflows engineered for centralized system management.</p>
+                    </div>
                 </div>
-                <div class="hero-image-side">
-                    <img class="hero-banner-img" src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/header_cr.jpg" alt="Kelas Akselerasi Bahasa Inggris Korporat ETK Yogyakarta">
+
+                <div class="scene-card">
+                    <div class="scene-image-wrapper">
+                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/scene2.png" alt="ETK Scene 2">
+                    </div>
+                    <div class="scene-info">
+                        <span class="scene-tag">Phase 02</span>
+                        <h3>Interactive User Interface</h3>
+                        <p>A comprehensive preview of the client-side control terminal, optimized for real-time data visualization and smooth module switching.</p>
+                    </div>
+                </div>
+
+                <div class="scene-card">
+                    <div class="scene-image-wrapper">
+                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/scene3.png" alt="ETK Scene 3">
+                    </div>
+                    <div class="scene-info">
+                        <span class="scene-tag">Phase 03</span>
+                        <h3>Global Deployment Network</h3>
+                        <p>Visual presentation of our server distribution network, ensuring low-latency access and high-availability operations globally.</p>
+                    </div>
                 </div>
             </div>
-        </section>
+        </main>
+    </div>
 
-        <!-- PORTAL DASHBOARD CONTROLLER -->
-        <section class="dashboard-section" id="dashboard">
-            <div class="container">
-                <div class="section-title">Portal Pendaftaran & Program Kursus Bahasa Inggris ETK Global</div>
-                <p class="section-subtitle">Gunakan navigator vertikal untuk memicu visual alur data program secara downward di kanan.</p>
+    <!-- ================= PAGE 2: INTEGRATED CORPORATE SUB-DOMAIN ================= -->
+    <div id="corporate-english-page" class="app-page">
+        <div class="corporate-body">
+            <section class="syllabus-hero">
+                <div class="container">
+                    <span class="class-badge">Corporate Executive Class</span>
+                    <h2>English Corporate</h2>
+                    <p class="main-description">Pelatihan bahasa Inggris komunikasi bisnis persuasif berskala korporat[cite: 1].</p>
+                    <div class="program-focus-box">
+                        Fokus Penuh: <strong>Kemampuan Presentasi Tingkat Tinggi</strong> dan <strong>Negosiasi Eksekutif Global</strong> untuk akselerasi performa bisnis multinasional[cite: 1].
+                    </div>
+                </div>
+            </section>
+
+            <section class="container">
+                <h2 class="section-title-premium">Comprehensive Syllabus (Kurikulum 4 Tahap)[cite: 1]</h2>
                 
-                <div class="dashboard-vertical-layout">
-                    <div class="dashboard-tabs-vertical">
-                        <button class="tab-btn active" onclick="switchTab(event, 'english-skills')">English Skills Matrix</button>
-                        <button class="tab-btn" onclick="switchTab(event, 'learning-modes')">Metode Pembelajaran</button>
-                        <button class="tab-btn" onclick="switchTab(event, 'prometric-nursing')">Prometric & Interview Prep</button>
-                    </div>
-
-                    <div class="dashboard-content-panel">
-                        <div id="english-skills" class="tab-panel active">
-                            <div class="sub-program-downward-grid">
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English for IELTS Test</span>
-                                    <p>Akselerasi pencapaian target evaluasi IELTS Band 9 melalui dekonstruksi total terhadap seluruh komponen penilaian resmi di Yogyakarta.</p>
-                                </div>
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English for Corporate Class</span>
-                                    <p>Restrukturisasi fondasi mekanika bahasa, pembenahan tata bahasa eksekutif, dan eksekusi memo bisnis bisnis formal.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="learning-modes" class="tab-panel">
-                            <div class="sub-program-downward-grid">
-                                <div class="sub-card" style="border-left: 4px solid #14b8a6;">
-                                    <span class="sub-card-title">Private Class IELTS & Corporate</span>
-                                    <p>Akses bimbingan eksklusif tatap muka satu lawan satu dengan kurikulum yang dikustomisasi penuh sesuai profil kompetensi Anda.</p>
-                                </div>
-                                <div class="sub-card">
-                                    <span class="sub-card-title">Corporate Group Training</span>
-                                    <p>Program in-house training intensif untuk instansi dan korporasi guna meningkatkan standard global kompetensi tim.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="prometric-nursing" class="tab-panel">
-                            <div class="sub-program-downward-grid">
-                                <div class="sub-card">
-                                    <span class="sub-card-title">Prometric Nurse Test Prep</span>
-                                    <p>Syllabus komprehensif penempatan perawat medis ke luar negeri dengan penguasaan terminologi medis standar internasional.</p>
-                                </div>
-                                <div class="sub-card">
-                                    <span class="sub-card-title">English for Job Interview</span>
-                                    <p>Strategi taktis menjawab dan memenangkan wawancara kerja tingkat global dengan penyusunan portofolio profesional.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PPS SYSTEM FRAMEWORK METHODOLOGY -->
-        <section class="methodology-section" id="methodology">
-            <div class="container">
-                <div class="section-title">Metodologi Unggulan: Persuasive Positioning System (PPS)</div>
-                <div class="methodology-card">
-                    <h3>Akselerasi Melalui Dekonstruksi Matriks Pengujian</h3>
-                    <p>Dalam program kursus persiapan IELTS Band 9 Yogyakarta, metodologi PPS berfungsi membongkar parameter penilaian penguji (Examiner Matrix). Melalui restrukturisasi konstruksi argumen dan modulasi intonasi, kandidat diposisikan secara persuasif guna meraih efisiensi performa linguistik maksimal dalam skenario dunia kerja nyata maupun pengujian formal.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CORPORATE & ACADEMIC PRICING SELECTION PACKAGES -->
-        <section class="grid-section" id="packages">
-            <div class="container">
-                <div class="section-title">Paket Program Pilihan Utama</div>
-                <div class="program-grid">
-                    <div class="program-card">
-                        <div>
-                            <h2>IELTS Preparation</h2>
-                            <div class="price">Band 9 Goal</div>
-                            <p>Kelas eksklusif dekonstruksi total matriks pengujian IELTS. Ideal untuk akademisi, pendaftaran beasiswa, dan kebutuhan migrasi global.</p>
-                        </div>
-                        <a href="https://wa.me/6281901685253" target="_blank" rel="noopener" class="btn-cta" style="font-size: 14px; padding: 12px;">Ambil Penempatan &rarr;</a>
-                    </div>
-                    <div class="program-card">
-                        <div>
-                            <h2>Corporate Training</h2>
-                            <div class="price">B2B Customized</div>
-                            <p>Modul terintegrasi untuk komunikasi bisnis korporat, korespondensi eksekutif, serta simulasi negosiasi tingkat tinggi.</p>
-                        </div>
-                        <a href="https://wa.me/6281901685253" target="_blank" rel="noopener" class="btn-cta" style="font-size: 14px; padding: 12px;">Hubungi Kemitraan &rarr;</a>
-                    </div>
-                    <div class="program-card">
-                        <div>
-                            <h2>Professional Prep</h2>
-                            <div class="price">Global Career</div>
-                            <p>Pelatihan akselerasi khusus English for job interview dan penguasaan standar kelulusan sertifikasi tes Prometric Nurse.</p>
-                        </div>
-                        <a href="https://wa.me/6281901685253" target="_blank" rel="noopener" class="btn-cta" style="font-size: 14px; padding: 12px;">Mulai Konsultasi &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SILABUS KORPORAT MULTI-PHASE ACCELERATION PROGRAM -->
-        <section class="corporate-syllabus-wrapper" id="corporate-executive-syllabus">
-            <div class="container">
-                <span class="class-badge">Kurikulum Premium</span>
-                <h2 class="section-title-premium">Comprehensive Syllabus (Kurikulum 4 Tahap)</h2>
                 <div class="timeline-grid">
+                    <!-- TAHAP 1 -->
                     <div class="timeline-card">
                         <div class="time-tag">Tahap 01</div>
                         <div class="timeline-detail">
-                            <h3>High-Stakes Corporate Presentation</h3>
-                            <p>Fokus pada penguasaan kendali panggung, manajemen intonasi strategis, dan struktur pembukaan presentasi bisnis internasional untuk merebut atensi klien global.</p>
+                            <h3>High-Stakes Corporate Presentation[cite: 1]</h3>
+                            <p>Fokus pada penguasaan kendali panggung dan struktur pembukaan presentasi bisnis yang langsung memikat atensi <em>stakeholder</em> internasional[cite: 1].</p>
+                            <ul>
+                                <li>Strategi manipulasi intonasi persuasif (<em>Signposting Language</em>)[cite: 1].</li>
+                                <li>Teknik visualisasi data kompleks menggunakan terminologi finansial makro[cite: 1].</li>
+                                <li>Q&A Handling: Taktik menjawab pertanyaan agresif dari jajaran Direksi Eksekutif[cite: 1].</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <!-- TAHAP 2 -->
                     <div class="timeline-card">
                         <div class="time-tag">Tahap 02</div>
                         <div class="timeline-detail">
-                            <h3>Advanced Business Correspondence & Layout</h3>
-                            <p>Mekanisme penulisan email taktis, proposal bisnis bernilai tinggi, serta penyusunan dokumen laporan korporat terstandarisasi tanpa kesalahan gramatikal.</p>
+                            <h3>Executive Cross-Border Negotiation[cite: 1]</h3>
+                            <p>Mengartikulasikan nilai tawar korporasi secara taktis tanpa terdengar konfrontatif dalam situasi <em>deadlock</em>[cite: 1].</p>
+                            <ul>
+                                <li><em>Concession-making patterns</em>: Pola penawaran dan kompromi bisnis strategis[cite: 1].</li>
+                                <li>Counter-proposals: Menolak penawaran asing secara elegan menggunakan metode diplomasi barat[cite: 1].</li>
+                                <li>Closing Deal Expressions: Mengunci kesepakatan hukum kemitraan secara verbal[cite: 1].</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <!-- TAHAP 3 -->
                     <div class="timeline-card">
                         <div class="time-tag">Tahap 03</div>
                         <div class="timeline-detail">
-                            <h3>Cross-Cultural Negotiation Strategies</h3>
-                            <p>Mempelajari kerangka diplomasi bahasa Inggris untuk resolusi konflik, negosiasi kontrak kerja makro, dan kolaborasi strategis antar-negara.</p>
+                            <h3>Persuasive Pitching & Client Acquisition[cite: 1]</h3>
+                            <p>Metodologi penulisan dan penyampaian proposal bisnis untuk memenangkan tender internasional korporat[cite: 1].</p>
+                            <ul>
+                                <li>Formulasi <em>Value Proposition</em> dengan framework bahasa Inggris formal[cite: 1].</li>
+                                <li>Elevator Pitching: Memadatkan proposal proyek bernilai miliaran ke dalam ringkasan 3 menit[cite: 1].</li>
+                            </ul>
                         </div>
                     </div>
+
+                    <!-- TAHAP 4 -->
                     <div class="timeline-card">
                         <div class="time-tag">Tahap 04</div>
                         <div class="timeline-detail">
-                            <h3>Examiner Diagnostic & Core Assessment</h3>
-                            <p>Simulasi akhir komprehensif berstandar IELTS Band 9 dan Prometric Testing untuk validasi kesiapan kompetensi bahasa mutlak sebelum rilis ke industri.</p>
+                            <h3>Global Executive Leadership Communication[cite: 1]</h3>
+                            <p>Komunikasi manajerial lintas budaya (<em>Cross-Cultural Management</em>) untuk memimpin tim multinasional[cite: 1].</p>
+                            <ul>
+                                <li>Crisis Communication: Retorika penanganan krisis internal perusahaan kepada media asing[cite: 1].</li>
+                                <li>Diplomatic Assertiveness: Menegakkan otoritas kepemimpinan dalam rapat dewan direksi global[cite: 1].</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- TRIPLE SCENE DOCUMENTATION INFRASTRUCTURE GALLERY -->
-        <section class="media-gallery" id="dokumentasi">
-            <div class="container">
-                <div class="section-title">Dokumentasi Ekosistem ETK Global</div>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/scene1.png" alt="Aktivitas Pengembangan Karir Global ETK Yogyakarta - Sesi 1">
-                        <div class="gallery-caption">Sesi Strategi Karir Internasional & Penguasaan Kompetensi Korporat</div>
+                <h2 class="section-title-premium">Arsitektur E-Modul & Aktivitas Belajar[cite: 1]</h2>
+                
+                <div class="emodule-grid">
+                    <div class="emodule-card">
+                        <div>
+                            <div class="module-header">
+                                <h3>E-Modul Vol. 01: The Persuasive Speaker[cite: 1]</h3>
+                                <span class="module-number">PDF + Audio Pack[cite: 1]</span>
+                            </div>
+                            <div class="material-block">
+                                <h4>Core Materials:[cite: 1]</h4>
+                                <p>Kompilasi 500 frasa kunci korporasi internasional, naskah presentasi standardisasi Fortune 500, dan cetak biru <em>ice-breaking</em> bisnis formal[cite: 1].</p>
+                            </div>
+                            <div class="material-block">
+                                <h4>Learning Activities:[cite: 1]</h4>
+                                <p>Rekaman mandiri studi kasus mingguan, bedah anatomi video pidato CEO global, dan perbaikan aksen fonetika profesional[cite: 1].</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="activity-badge">Interactive Video Peer-Review[cite: 1]</span>
+                        </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/scene2.png" alt="Sesi Pelatihan IELTS Band 9 Intensif - Sesi 2">
-                        <div class="gallery-caption">Pelatihan Intensif Dekonstruksi Ujian IELTS Bersama Mentor Eksper</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/scene3.png" alt="Uji Kompetensi Kerja Bahasa Inggris Bisnis - Sesi 3">
-                        <div class="gallery-caption">Simulasi Wawancara Kerja dan Uji Kelayakan Bahasa Inggris Korporasi</div>
+
+                    <div class="emodule-card">
+                        <div>
+                            <div class="module-header">
+                                <h3>E-Modul Vol. 02: The Master Negotiator[cite: 1]</h3>
+                                <span class="module-number">Interactive Blueprint[cite: 1]</span>
+                            </div>
+                            <div class="material-block">
+                                <h4>Core Materials:[cite: 1]</h4>
+                                <p>Lembar kerja taktis pemetaan konsesi, matriks respon terhadap penolakan harga, dan glosarium idiom hukum komersial global[cite: 1].</p>
+                            </div>
+                            <div class="material-block">
+                                <h4>Learning Activities:[cite: 1]</h4>
+                                <p>Simulasi <em>Live Mock Negotiation</em> 1-on-1 bersama pakar, roleplay penyelesaian konflik sengketa pasokan vendor internasional[cite: 1].</p>
+                            </div>
+                        </div>
+                        <div>
+                            <span class="activity-badge">Live Boardroom Simulation[cite: 1]</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
 
-    <!-- ============================================== -->
-    <!-- VIRTUAL PAGE 2: INTEGRATED CASE STUDY PORTFOLIO -->
-    <!-- ============================================== -->
-    <div id="portfolio-case-study-page" class="virtual-page">
-        <section class="portfolio-section">
-            <div class="container">
-                <div class="portfolio-box">
-                    <span class="class-badge" style="background-color: #14b8a6;">STUDI KASUS TEKNIS</span>
-                    <h1 style="color: #ffffff; font-size: 32px; margin-top: 10px;">ETK Global Integrated Engineering Portfolio</h1>
-                    <p class="portfolio-intro">Halaman ini mendokumentasikan pembuktian keahlian, dekonstruksi pemecahan masalah (*problem-solving*), serta arsitektur pengembangan integrasi kode yang telah diselesaikan pada proyek ini.</p>
-
-                    <h2>1. Resolusi Jalur Distribusi Aset (Raw Image CDN)</h2>
-                    <p style="margin-top: 10px;">Mengatasi isu kegagalan pemuatan gambar (*broken links*) akibat proteksi intermitten pada hosting statis GitHub Pages dengan mengonversi jalur repositori mentah ke dalam format CDN *production-ready*:</p>
-                    <ul>
-                        <li><code>https://github.com/.../blob/main/logo_etk_cr.png</code> (Format salah/terblokir)</li>
-                        <li>Direstrukturisasi total menjadi: <code>https://raw.githubusercontent.com/gasfarrasyid/etk_bisa/main/logo_etk_cr.png</code></li>
-                    </ul>
-
-                    <h2>2. Implementasi CSS Zero-Margin Navigation Backdrop Layer</h2>
-                    <p style="margin-top: 10px;">Memasang gambar aset dekoratif <code>etk_future.png</code> agar merekat presisi tanpa celah (Zero Edge) pada koordinat kiri, atas, dan bawah bar navigasi utama. Pengaturan lapisan menggunakan komposit CSS khusus:</p>
-                    <ul>
-                        <li>Mengisolasi ruang koordinat dengan properti <code>position: absolute; left: 0; top: 0; bottom: 0;</code></li>
-                        <li>Memanfaatkan teknik modern <code>mask-image: linear-gradient(...)</code> untuk menghasilkan efek gradasi memudar (*fading*) transparan yang halus ke arah kanan, menjamin teks menu navigasi tetap terbaca jelas (*high-readability*).</li>
-                    </ul>
-
-                    <h2>3. Integrasi Konten Multi-Scene & Kurikulum 4 Tahap</h2>
-                    <p style="margin-top: 10px;">Menyatukan skenario mading digital publik ke dalam tata letak Grid responsif (<code>scene1.png</code>, <code>scene2.png</code>, <code>scene3.png</code>) serta merancang komponen alur kerja linier untuk menyajikan kurikulum silabus korporat secara detail.</p>
-
-                    <h2>4. Portal Kontrol Dashboard Berbasis Downward Data Flow</h2>
-                    <p style="margin-top: 10px;">Membangun sistem navigasi vertikal penjelajah sub-program murni menggunakan Vanilla JavaScript untuk memanipulasi penambahan kelas <code>.active</code> pada DOM secara instan tanpa memerlukan ketergantungan library pihak ketiga yang berat.</p>
-
-                    <button class="btn-cta" style="margin-top: 35px; width: 100%;" onclick="showVirtualPage('main-application-page')">&larr; Kembali Jelajahi Aplikasi Utama</button>
+                <div class="action-bar">
+                    <a href="https://api.whatsapp.com/send?phone=6281901685253&text=*Halo%20ETK%20Global%2C%20saya%20tertarik%20mendaftar%20Corporate%20Executive%20Class%20berdasarkan%20silabus%20resmi*" target="_blank" rel="noopener noreferrer" class="btn-cta">Daftar Kelas Eksekutif &rarr;[cite: 1]</a>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 
-    <!-- FOOTER ARCHITECTURE SYSTEM -->
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-info">
-                <h4 style="color:#ffffff; margin-bottom:15px;">ETK Global Head Office</h4>
-                <p>Panjen Tajem, Maguwoharjo, Depok, Sleman</p>
-                <p>Daerah Istimewa Yogyakarta 55281</p>
-                <p style="margin-top:10px; color:#14b8a6;">Hotline Konten: +62 819-0168-5253</p>
-            </div>
-            <div class="footer-links">
-                <h4 style="color:#ffffff; margin-bottom:15px;">Akses Cepat Dokumen</h4>
-                <a href="#dashboard" onclick="showVirtualPage('main-application-page')">Portal Skills Matrix</a>
-                <a href="#methodology" onclick="showVirtualPage('main-application-page')">Metodologi Persuasive Positioning</a>
-                <a href="#" onclick="showVirtualPage('portfolio-case-study-page')">Lihat Studi Kasus Portofolio</a>
+    <!-- ================= PAGE 3: INTEGRATED PORTFOLIO CASE STUDY ================= -->
+    <div id="portfolio-case-study-page" class="app-page">
+        <div class="portfolio-body">
+            <div class="container">
+                <div class="section-title" style="margin-bottom: 40px;">
+                    <h2 style="color: #ffffff;">💼 Case Study Portfolio: ETK Global Web Platform[cite: 2]</h2>
+                    <p style="color: var(--pale-purple);">Pelatihan Bahasa Inggris Korporat & Akselerasi IELTS Band 9 - Yogyakarta[cite: 2]</p>
+                </div>
+
+                <!-- 1. Deskripsi Proyek -->
+                <div class="case-study-box">
+                    <h3>📌 1. Deskripsi Proyek[cite: 2]</h3>
+                    <p>Membangun ulang (<em>rebuilding</em>) dan mengintegrasikan arsitektur mading digital serta portal informasi untuk ETK Global Yogyakarta ke dalam satu file HTML tunggal (<em>single-file deployment</em>) guna memastikan sinkronisasi aset 100%[cite: 2].</p>
+                </div>
+
+                <!-- 2. Tantangan Teknis & Solusi -->
+                <div class="case-study-box">
+                    <h3>🛠️ 2. Tantangan Teknis & Solusi (Case Study)[cite: 2]</h3>
+                    
+                    <div>
+                        <h4>Kasus 1: Sinkronisasi Aset Gambar GitHub (CORS & Broken Links)[cite: 2]</h4>
+                        <ul>
+                            <li><strong>Masalah:</strong> Menggunakan URL standar GitHub (<code>github.com/.../blob/...</code>) pada tag <code>&lt;img&gt;</code> menyebabkan gambar tidak muncul karena proteksi intermitten halaman HTML biasa[cite: 2].</li>
+                            <li><strong>Solusi:</strong> Mengonversi seluruh tautan mentah menjadi jalur distribusi CDN resmi GitHub (<code>https://raw.githubusercontent.com/</code>)[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4>Kasus 2: Kompatibilitas Tata Letak Navigasi <em>Teal Integrated Bar</em>[cite: 2]</h4>
+                        <ul>
+                            <li><strong>Masalah:</strong> Memasang gambar latar belakang <code>etk_future.png</code> tepat di koordinat 0 tepi kiri, 0 atas, dan 0 bawah bar navigasi tanpa merusak elemen menu teks[cite: 2].</li>
+                            <li><strong>Solusi:</strong> Menerapkan sistem layer independen dengan CSS modern:[cite: 2]</li>
+                        </ul>
+                        <div class="code-snippet">
+.header-bg-backdrop-layer {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 450px;
+    z-index: 1;
+}[cite: 2]
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2026 ETK Global. All Rights Reserved. Kursus IELTS Terbaik & Pelatihan Bahasa Inggris Bisnis Korporat Yogyakarta.</p>
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 ETK Global. All Rights Reserved. Portal Resmi Pelatihan Bahasa Inggris Korporat[cite: 1].</p>
         </div>
     </footer>
 
-    <!-- INTERACTIVE ACCESSIBILITY SCRIPT CONTAINER -->
+    <!-- INTERACTIVE ROUTER JAVASCRIPT -->
     <script>
-        // CONTROLLER TABS UNTUK VERTICAL DASHBOARD PANEL
-        function switchTab(evt, tabId) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tab-panel");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].className = tabcontent[i].className.replace(" active", "");
-            }
-            tablinks = document.getElementsByClassName("tab-btn");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabId).className += " active";
-            evt.currentTarget.className += " active";
-        }
-
-        // CONTROLLER VIRTUAL PAGE SINKRONISASI TOTAL (MAIN VS PORTFOLIO)
-        function showVirtualPage(pageId) {
-            var pages = document.getElementsByClassName("virtual-page");
-            for (var i = 0; i < pages.length; i++) {
-                pages[i].className = pages[i].className.replace(" active-page", "");
-            }
-            document.getElementById(pageId).className += " active-page";
+        function switchPage(pageId) {
+            // Sembunyikan seluruh halaman virtual aplikasi
+            const pages = document.querySelectorAll('.app-page');
+            pages.forEach(page => {
+                page.classList.remove('active-page');
+            });
             
-            // Otomatis scroll ke atas setelah berganti halaman virtual
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            // Tampilkan halaman virtual sasaran
+            const targetPage = document.getElementById(pageId);
+            if(targetPage) {
+                targetPage.classList.add('active-page');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
         }
     </script>
 </body>
