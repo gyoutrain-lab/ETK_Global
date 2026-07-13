@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETK Global - Integrated Executive Portal & Portfolio</title>
+    <title>ETK Global - Web Production & SEO Architecture Portal</title>
     
     <!-- Integrasi Favicon -->
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
@@ -20,12 +20,14 @@
             --black-purple-light: #2a083d;
             --navbar-height: 80px;
             
-            /* Sub-domain Assets Color */
+            /* Tech & SEO Sub-domain Colors */
             --teal-main: #0d9488;
             --teal-dark: #115e59;
             --teal-light: #14b8a6;
             --dark-blue-bg: #0b1329;
             --card-slate: #1e293b;
+            --warning-amber: #f59e0b;
+            --danger-red: #ef4444;
         }
 
         * {
@@ -129,19 +131,14 @@
             background: rgba(255, 255, 255, 0.15);
         }
 
-        /* Dropdown Black Purple (3D Gradation) */
-        .dropdown-trigger {
-            position: relative;
-        }
-        .dropdown-trigger .arrow {
-            font-size: 10px;
-            margin-left: 5px;
-        }
+        /* Dropdown Black Purple */
+        .dropdown-trigger { position: relative; }
+        .dropdown-trigger .arrow { font-size: 10px; margin-left: 5px; }
         .dropdown-menu {
             position: absolute;
             top: calc(100% + 15px);
             left: 0;
-            width: 240px;
+            width: 260px;
             list-style: none;
             padding: 10px 0;
             margin: 0;
@@ -174,12 +171,8 @@
         }
 
         /* --- VIRTUAL PAGES SYSTEM --- */
-        .app-page {
-            display: none;
-        }
-        .app-page.active-page {
-            display: block;
-        }
+        .app-page { display: none; }
+        .app-page.active-page { display: block; }
 
         /* --- HEADER SECTION --- */
         .etk-header {
@@ -229,16 +222,13 @@
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        /* --- MAIN PAGE: SCENE GRID STYLING --- */
+        /* --- MAIN PAGE: DOCUMENTATION GRID --- */
         .etk-document-container {
             max-width: 1200px;
             margin: 60px auto;
             padding: 0 20px;
         }
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
+        .section-title { text-align: center; margin-bottom: 50px; }
         .section-title h2 {
             font-size: 2.2rem;
             color: var(--black-purple-dark);
@@ -247,15 +237,8 @@
             display: inline-block;
         }
         .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background-color: var(--maroon-red);
-            border-radius: 2px;
+            content: ''; position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%);
+            width: 60px; height: 4px; background-color: var(--maroon-red); border-radius: 2px;
         }
         .scene-grid {
             display: grid;
@@ -263,47 +246,21 @@
             gap: 30px;
         }
         .scene-card {
-            background: #ffffff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+            background: #ffffff; border-radius: 12px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: all 0.3s ease;
             border: 1px solid rgba(0, 0, 0, 0.05);
         }
-        .scene-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(18, 2, 28, 0.15);
-        }
-        .scene-image-wrapper {
-            width: 100%;
-            height: 220px;
-            overflow: hidden;
-        }
-        .scene-image-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .scene-card:hover .scene-image-wrapper img {
-            transform: scale(1.05);
-        }
-        .scene-info {
-            padding: 25px;
-        }
+        .scene-card:hover { transform: translateY(-8px); box-shadow: 0 15px 35px rgba(18, 2, 28, 0.15); }
+        .scene-image-wrapper { width: 100%; height: 220px; overflow: hidden; }
+        .scene-image-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .scene-card:hover .scene-image-wrapper img { transform: scale(1.05); }
+        .scene-info { padding: 25px; }
         .scene-tag {
-            display: inline-block;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            font-weight: 700;
-            padding: 4px 10px;
-            background-color: rgba(128, 0, 32, 0.1);
-            color: var(--maroon-red);
-            border-radius: 20px;
-            margin-bottom: 12px;
+            display: inline-block; font-size: 0.75rem; text-transform: uppercase; font-weight: 700;
+            padding: 4px 10px; background-color: rgba(128, 0, 32, 0.1); color: var(--maroon-red); border-radius: 20px; margin-bottom: 12px;
         }
 
-        /* --- ENGLISH CORPORATE PAGE STYLE --- */
+        /* --- ARSITEKTUR STRATEGI SEO & PRODUCTION PAGE --- */
         .corporate-body {
             background-color: var(--dark-blue-bg);
             color: #cbd5e1;
@@ -316,7 +273,7 @@
         }
         .class-badge {
             display: inline-block;
-            background-color: #ef4444;
+            background-color: var(--teal-light);
             color: #ffffff;
             font-weight: 900;
             font-size: 12px;
@@ -324,20 +281,10 @@
             padding: 5px 16px;
             border-radius: 50px;
             margin-bottom: 25px;
-            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            box-shadow: 0 4px 12px rgba(20, 184, 166, 0.3);
         }
-        .syllabus-hero h2 {
-            font-size: 42px;
-            color: #ffffff;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-        .main-description {
-            max-width: 850px;
-            margin: 0 auto 30px auto;
-            color: #e2e8f0;
-            font-size: 20px;
-        }
+        .syllabus-hero h2 { font-size: 42px; color: #ffffff; font-weight: 800; margin-bottom: 20px; }
+        .main-description { max-width: 850px; margin: 0 auto 30px auto; color: #e2e8f0; font-size: 20px; }
         .program-focus-box {
             max-width: 750px;
             margin: 0 auto;
@@ -353,15 +300,10 @@
             color: #ffffff;
             font-weight: 700;
             margin-bottom: 40px;
-            border-left: 5px solid var(--teal-light);
+            border-left: 5px solid var(--maroon-red);
             padding-left: 18px;
         }
-        .timeline-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            margin-bottom: 60px;
-        }
+        .timeline-grid { display: flex; flex-direction: column; gap: 25px; margin-bottom: 60px; }
         .timeline-card {
             background-color: var(--card-slate);
             border: 1px solid #334155;
@@ -372,10 +314,11 @@
             gap: 25px;
             transition: all 0.3s ease;
         }
-        .timeline-card:hover { border-color: var(--teal-light); transform: translateX(5px); }
-        .time-tag { color: var(--teal-light); font-weight: 800; font-size: 20px; text-transform: uppercase; }
+        .timeline-card:hover { border-color: var(--maroon-red); transform: translateX(5px); }
+        .time-tag { color: var(--pale-purple); font-weight: 800; font-size: 20px; text-transform: uppercase; }
         .timeline-detail h3 { color: #ffffff; font-size: 22px; margin-bottom: 12px; }
         .timeline-detail ul { margin-left: 20px; color: #94a3b8; margin-top: 10px; }
+        
         .emodule-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -392,7 +335,7 @@
             justify-content: space-between;
             transition: border-color 0.3s ease;
         }
-        .emodule-card:hover { border-color: var(--teal-light); }
+        .emodule-card:hover { border-color: var(--warning-amber); }
         .module-header {
             display: flex;
             justify-content: space-between;
@@ -405,36 +348,23 @@
         .module-number {
             font-size: 12px;
             font-weight: 900;
-            color: var(--teal-light);
-            background-color: rgba(20, 184, 166, 0.1);
+            color: var(--warning-amber);
+            background-color: rgba(245, 158, 11, 0.1);
             padding: 5px 12px;
             border-radius: 6px;
         }
-        .material-block h4 { color: #facc15; font-size: 14px; margin-bottom: 8px; text-transform: uppercase; }
+        .material-block h4 { color: #38bdf8; font-size: 14px; margin-bottom: 8px; text-transform: uppercase; }
         .material-block p { color: #94a3b8; margin-bottom: 20px; }
         .activity-badge {
             display: inline-block;
             background-color: #1e293b;
-            color: var(--teal-light);
+            color: var(--pale-purple);
             font-size: 13px;
             padding: 4px 12px;
             border-radius: 6px;
             font-weight: 700;
-            border: 1px solid rgba(20, 184, 166, 0.2);
+            border: 1px solid rgba(177, 156, 217, 0.2);
         }
-        .action-bar { text-align: center; padding: 40px 0; }
-        .btn-cta {
-            display: inline-block;
-            background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
-            color: #ffffff;
-            text-decoration: none;
-            padding: 16px 40px;
-            border-radius: 8px;
-            font-weight: 700;
-            box-shadow: 0 10px 20px rgba(13, 148, 136, 0.3);
-            transition: all 0.2s ease;
-        }
-        .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(13, 148, 136, 0.4); }
 
         /* --- PORTFOLIO CASE STUDY PAGE STYLE --- */
         .portfolio-body {
@@ -455,22 +385,20 @@
             color: #ffffff;
             font-size: 1.6rem;
             margin-bottom: 15px;
-            border-bottom: 1px solid #334155;
+            border-bottom: 1px solid #475569;
             padding-bottom: 10px;
         }
-        .case-study-box h4 {
-            color: #facc15;
-            font-size: 1.2rem;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        .case-study-box ul {
-            margin-left: 25px;
-            margin-bottom: 20px;
-        }
-        .case-study-box li {
-            margin-bottom: 12px;
-            line-height: 1.6;
+        .case-study-box h4 { color: #ef4444; font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px; }
+        .case-study-box ul { margin-left: 25px; margin-bottom: 20px; }
+        .case-study-box li { margin-bottom: 12px; line-height: 1.6; }
+        .badge-danger {
+            background-color: rgba(239, 68, 68, 0.15);
+            color: #f87171;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            border: 1px solid rgba(239, 68, 68, 0.3);
         }
         .code-snippet {
             background: #090d16;
@@ -482,7 +410,6 @@
             overflow-x: auto;
             border-left: 4px solid var(--maroon-red);
             margin-top: 15px;
-            box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
         }
 
         /* --- GLOBAL FOOTER --- */
@@ -525,15 +452,14 @@
         <ul class="navbar-menu">
             <li><a href="javascript:void(0)" onclick="switchPage('main-application-page')">Home</a></li>
             <li class="dropdown-trigger">
-                <a href="javascript:void(0)">Programs <span class="arrow">▼</span></a>
+                <a href="javascript:void(0)">Expertise Core <span class="arrow">▼</span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="javascript:void(0)" onclick="switchPage('corporate-english-page')">English Corporate</a></li>
+                    <li><a href="javascript:void(0)" onclick="switchPage('corporate-english-page')">SEO & Web Production</a></li>
                     <li><a href="javascript:void(0)" onclick="switchPage('main-application-page')">Global Infrastructure</a></li>
                 </ul>
             </li>
-            <!-- Case Study Portfolio Menu Link -->
-            <li><a href="javascript:void(0)" onclick="switchPage('portfolio-case-study-page')">Case Study Portfolio</a></li>
-            <li><a href="javascript:void(0)">About</a></li>
+            <li><a href="javascript:void(0)" onclick="switchPage('portfolio-case-study-page')">Deployment Case Study</a></li>
+            <li><a href="javascript:void(0)">Overview</a></li>
         </ul>
     </nav>
 
@@ -543,218 +469,218 @@
             <div class="header-overlay"></div>
             <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/header_cr.jpg" alt="ETK Global Header" class="header-bg">
             <div class="header-content">
-                <h1>Welcome to ETK Global</h1>
-                <p>Navigating the Future of Global Innovation & Technology</p>
+                <h1>ETK Global Tech Matrix</h1>
+                <p>Enterprise SEO Engineering & Technical Production Optimization</p>
             </div>
         </header>
 
         <main class="etk-document-container">
             <div class="section-title">
-                <h2>Project Documentation & Scenes</h2>
-                <p>Visual breakdown of core architectural layouts and operational environments.</p>
+                <h2>Infrastructure Architecture & Log Files</h2>
+                <p>Visual overview of current crawl matrix and deployment tracking structures.</p>
             </div>
 
             <div class="scene-grid">
                 <div class="scene-card">
                     <div class="scene-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/scene1.png" alt="ETK Scene 1">
+                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/scene1.png" alt="SEO Infrastructure">
                     </div>
                     <div class="scene-info">
-                        <span class="scene-tag">Phase 01</span>
-                        <h3>System Architecture Layout</h3>
-                        <p>This document illustrates the initial infrastructure mapping and operational workflows engineered for centralized system management.</p>
+                        <span class="scene-tag">Core Tech</span>
+                        <h3>Search Engine Crawl Efficiency</h3>
+                        <p>Mapping raw technical indexation strategies to achieve rendering speeds optimal for modern core web vitals and direct algorithmic compliance.</p>
                     </div>
                 </div>
 
                 <div class="scene-card">
                     <div class="scene-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/scene2.png" alt="ETK Scene 2">
+                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/scene2.png" alt="UI Deployment">
                     </div>
                     <div class="scene-info">
-                        <span class="scene-tag">Phase 02</span>
-                        <h3>Interactive User Interface</h3>
-                        <p>A comprehensive preview of the client-side control terminal, optimized for real-time data visualization and smooth module switching.</p>
+                        <span class="scene-tag">CI/CD Pipeline</span>
+                        <h3>Interactive Dom Architecture</h3>
+                        <p>Refining interface script packaging to prevent client-side hydration lockup while maintaining persistent 3D UI layers.</p>
                     </div>
                 </div>
 
                 <div class="scene-card">
                     <div class="scene-image-wrapper">
-                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/scene3.png" alt="ETK Scene 3">
+                        <img src="https://raw.githubusercontent.com/gyoutrain-lab/ETK_Global/main/scene3.png" alt="Data Network">
                     </div>
                     <div class="scene-info">
-                        <span class="scene-tag">Phase 03</span>
-                        <h3>Global Deployment Network</h3>
-                        <p>Visual presentation of our server distribution network, ensuring low-latency access and high-availability operations globally.</p>
+                        <span class="scene-tag">Troubleshooting</span>
+                        <h3>Global Index Response Layer</h3>
+                        <p>Structuring clean single-file build paths designed to survive aggressive proxy behaviors and asynchronous rendering tests.</p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
 
-    <!-- ================= PAGE 2: INTEGRATED CORPORATE SUB-DOMAIN ================= -->
+    <!-- ================= PAGE 2: SEO & WEB PRODUCTION CURRICULUM MATRIX ================= -->
     <div id="corporate-english-page" class="app-page">
         <div class="corporate-body">
             <section class="syllabus-hero">
                 <div class="container">
-                    <span class="class-badge">Corporate Executive Class</span>
-                    <h2>English Corporate</h2>
-                    <p class="main-description">Pelatihan bahasa Inggris komunikasi bisnis persuasif berskala korporat[cite: 1].</p>
+                    <span class="class-badge">Enterprise Optimization Framework</span>
+                    <h2>SEO & Web Production Architecture</h2>
+                    <p class="main-description">
+                        Metodologi rekayasa balik performa situs web, strategi penanganan kegagalan indeksasi masif, dan optimasi arsitektur DOM tingkat lanjut.
+                    </p>
                     <div class="program-focus-box">
-                        Fokus Penuh: <strong>Kemampuan Presentasi Tingkat Tinggi</strong> dan <strong>Negosiasi Eksekutif Global</strong> untuk akselerasi performa bisnis multinasional[cite: 1].
+                        Fokus Utama: <strong>Algoritma Pemulihan Google Console</strong>, Penyehatan *Technical Audit*, serta Otomatisasi Git Web Production.
                     </div>
                 </div>
             </section>
 
             <section class="container">
-                <h2 class="section-title-premium">Comprehensive Syllabus (Kurikulum 4 Tahap)[cite: 1]</h2>
+                <h2 class="section-title-premium">Core Engineering Phases (Kurikulum Arsitektur Web)</h2>
                 
                 <div class="timeline-grid">
                     <!-- TAHAP 1 -->
                     <div class="timeline-card">
-                        <div class="time-tag">Tahap 01</div>
+                        <div class="time-tag">Fase 01</div>
                         <div class="timeline-detail">
-                            <h3>High-Stakes Corporate Presentation[cite: 1]</h3>
-                            <p>Fokus pada penguasaan kendali panggung dan struktur pembukaan presentasi bisnis yang langsung memikat atensi <em>stakeholder</em> internasional[cite: 1].</p>
+                            <h3>Advanced Technical SEO & Server-Side Log Analysis</h3>
+                            <p>Mengidentifikasi kegagalan bot perayap secara real-time dan menstrukturisasi ulang peta situs (*sitemap*) serta robots.txt dinamis.</p>
                             <ul>
-                                <li>Strategi manipulasi intonasi persuasif (<em>Signposting Language</em>)[cite: 1].</li>
-                                <li>Teknik visualisasi data kompleks menggunakan terminologi finansial makro[cite: 1].</li>
-                                <li>Q&A Handling: Taktik menjawab pertanyaan agresif dari jajaran Direksi Eksekutif[cite: 1].</li>
+                                <li>Audit *Crawl Budget* untuk situs korporasi berskala jutaan halaman secara efisien.</li>
+                                <li>Pencegahan *Internal Canonicalization Conflict* dan eliminasi tautan rusak secara masif.</li>
+                                <li>Implementasi JSON-LD Schema terstruktur tingkat lanjut untuk optimasi Rich Snippets.</li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- TAHAP 2 -->
                     <div class="timeline-card">
-                        <div class="time-tag">Tahap 02</div>
+                        <div class="time-tag">Fase 02</div>
                         <div class="timeline-detail">
-                            <h3>Executive Cross-Border Negotiation[cite: 1]</h3>
-                            <p>Mengartikulasikan nilai tawar korporasi secara taktis tanpa terdengar konfrontatif dalam situasi <em>deadlock</em>[cite: 1].</p>
+                            <h3>Google Search Console Deep-Dive & Indexation Recovery</h3>
+                            <p>Membaca dan menuntaskan anomali status error pada portal GSC ekstrim untuk mengembalikan performa impresi organik yang merosot tajam.</p>
                             <ul>
-                                <li><em>Concession-making patterns</em>: Pola penawaran dan kompromi bisnis strategis[cite: 1].</li>
-                                <li>Counter-proposals: Menolak penawaran asing secara elegan menggunakan metode diplomasi barat[cite: 1].</li>
-                                <li>Closing Deal Expressions: Mengunci kesepakatan hukum kemitraan secara verbal[cite: 1].</li>
+                                <li>Resolusi error "Crawled - Currently Not Indexed" & "Discovered - Currently Not Indexed".</li>
+                                <li>Analisis *Core Web Vitals* (LCP, INP, CLS) menggunakan instrumentasi performa lab Chrome.</li>
+                                <li>Penanganan hukuman manual (*Manual Action*) dan pembersihan injeksi *spam* injeksi pihak ketiga.</li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- TAHAP 3 -->
                     <div class="timeline-card">
-                        <div class="time-tag">Tahap 03</div>
+                        <div class="time-tag">Fase 03</div>
                         <div class="timeline-detail">
-                            <h3>Persuasive Pitching & Client Acquisition[cite: 1]</h3>
-                            <p>Metodologi penulisan dan penyampaian proposal bisnis untuk memenangkan tender internasional korporat[cite: 1].</p>
+                            <h3>High-Frequency CI/CD & Asset Delivery Orchestration</h3>
+                            <p>Mengelola pengiriman aset statis secara presisi dalam kerangka kerja *Single File Deployment* untuk bypass limitasi *cross-origin*.</p>
                             <ul>
-                                <li>Formulasi <em>Value Proposition</em> dengan framework bahasa Inggris formal[cite: 1].</li>
-                                <li>Elevator Pitching: Memadatkan proposal proyek bernilai miliaran ke dalam ringkasan 3 menit[cite: 1].</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- TAHAP 4 -->
-                    <div class="timeline-card">
-                        <div class="time-tag">Tahap 04</div>
-                        <div class="timeline-detail">
-                            <h3>Global Executive Leadership Communication[cite: 1]</h3>
-                            <p>Komunikasi manajerial lintas budaya (<em>Cross-Cultural Management</em>) untuk memimpin tim multinasional[cite: 1].</p>
-                            <ul>
-                                <li>Crisis Communication: Retorika penanganan krisis internal perusahaan kepada media asing[cite: 1].</li>
-                                <li>Diplomatic Assertiveness: Menegakkan otoritas kepemimpinan dalam rapat dewan direksi global[cite: 1].</li>
+                                <li>Sinkronisasi mutlak referensi media internal menggunakan jalur CDN terdistribusi.</li>
+                                <li>Metode kompresi gaya *CSS critical-path inline* untuk mencetak skor *Performance* 100/100 di Lighthouse.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <h2 class="section-title-premium">Arsitektur E-Modul & Aktivitas Belajar[cite: 1]</h2>
+                <h2 class="section-title-premium">Modul Praktis & Alur Kerja Simulasi</h2>
                 
                 <div class="emodule-grid">
                     <div class="emodule-card">
                         <div>
                             <div class="module-header">
-                                <h3>E-Modul Vol. 01: The Persuasive Speaker[cite: 1]</h3>
-                                <span class="module-number">PDF + Audio Pack[cite: 1]</span>
+                                <h3>Modul SEO Vol. 01: The Indexation Specialist</h3>
+                                <span class="module-number">GSC Blueprint Pack</span>
                             </div>
                             <div class="material-block">
-                                <h4>Core Materials:[cite: 1]</h4>
-                                <p>Kompilasi 500 frasa kunci korporasi internasional, naskah presentasi standardisasi Fortune 500, dan cetak biru <em>ice-breaking</em> bisnis formal[cite: 1].</p>
+                                <h4>Core Materials:</h4>
+                                <p>Cetak biru konfigurasi API Google Search Console, template audit otomatis, dan skrip monitoring perayapan log server harian.</p>
                             </div>
                             <div class="material-block">
-                                <h4>Learning Activities:[cite: 1]</h4>
-                                <p>Rekaman mandiri studi kasus mingguan, bedah anatomi video pidato CEO global, dan perbaikan aksen fonetika profesional[cite: 1].</p>
+                                <h4>Learning Activities:</h4>
+                                <p>Simulasi isolasi anomali duplikasi konten tanpa tag kanonikal pada sistem staging terisolasi.</p>
                             </div>
                         </div>
                         <div>
-                            <span class="activity-badge">Interactive Video Peer-Review[cite: 1]</span>
+                            <span class="activity-badge">Live Indexing Drills</span>
                         </div>
                     </div>
 
                     <div class="emodule-card">
                         <div>
                             <div class="module-header">
-                                <h3>E-Modul Vol. 02: The Master Negotiator[cite: 1]</h3>
-                                <span class="module-number">Interactive Blueprint[cite: 1]</span>
+                                <h3>Modul Dev Vol. 02: Production Troubleshooting</h3>
+                                <span class="module-number">Git & Automation Matrix</span>
                             </div>
                             <div class="material-block">
-                                <h4>Core Materials:[cite: 1]</h4>
-                                <p>Lembar kerja taktis pemetaan konsesi, matriks respon terhadap penolakan harga, dan glosarium idiom hukum komersial global[cite: 1].</p>
+                                <h4>Core Materials:</h4>
+                                <p>Kompilasi penanganan kegagalan pipa CI/CD, manajemen alokasi bundel aset web statis, dan struktur proteksi repositori.</p>
                             </div>
                             <div class="material-block">
-                                <h4>Learning Activities:[cite: 1]</h4>
-                                <p>Simulasi <em>Live Mock Negotiation</em> 1-on-1 bersama pakar, roleplay penyelesaian konflik sengketa pasokan vendor internasional[cite: 1].</p>
+                                <h4>Learning Activities:</h4>
+                                <p>Bedah kasus pemulihan kode patah saat siklus rilis ekstrim di bawah tekanan manajemen waktu.</p>
                             </div>
                         </div>
                         <div>
-                            <span class="activity-badge">Live Boardroom Simulation[cite: 1]</span>
+                            <span class="activity-badge">Broken Pipeline Recovery Simulation</span>
                         </div>
                     </div>
-                </div>
-
-                <div class="action-bar">
-                    <a href="https://api.whatsapp.com/send?phone=6281901685253&text=*Halo%20ETK%20Global%2C%20saya%20tertarik%20mendaftar%20Corporate%20Executive%20Class%20berdasarkan%20silabus%20resmi*" target="_blank" rel="noopener noreferrer" class="btn-cta">Daftar Kelas Eksekutif &rarr;[cite: 1]</a>
                 </div>
             </section>
         </div>
     </div>
 
-    <!-- ================= PAGE 3: INTEGRATED PORTFOLIO CASE STUDY ================= -->
+    <!-- ================= PAGE 3: PORTFOLIO CASE STUDY (SEO & PRODUCTION REAL WORLD) ================= -->
     <div id="portfolio-case-study-page" class="app-page">
         <div class="portfolio-body">
             <div class="container">
                 <div class="section-title" style="margin-bottom: 40px;">
-                    <h2 style="color: #ffffff;">💼 Case Study Portfolio: ETK Global Web Platform[cite: 2]</h2>
-                    <p style="color: var(--pale-purple);">Pelatihan Bahasa Inggris Korporat & Akselerasi IELTS Band 9 - Yogyakarta[cite: 2]</p>
+                    <h2 style="color: #ffffff;">💼 Technical Case Study: Web Production & SEO Architecture[cite: 2]</h2>
+                    <p style="color: var(--pale-purple);">Portofolio Rekayasa Ulang, Manajemen GSC, dan Resolusi Kegagalan Rilis Repositori</p>
                 </div>
 
                 <!-- 1. Deskripsi Proyek -->
                 <div class="case-study-box">
-                    <h3>📌 1. Deskripsi Proyek[cite: 2]</h3>
-                    <p>Membangun ulang (<em>rebuilding</em>) dan mengintegrasikan arsitektur mading digital serta portal informasi untuk ETK Global Yogyakarta ke dalam satu file HTML tunggal (<em>single-file deployment</em>) guna memastikan sinkronisasi aset 100%[cite: 2].</p>
+                    <h3>📌 1. Deskripsi Proyek & Lingkup Keahlian[cite: 2]</h3>
+                    <p>Membangun ulang (*rebuilding*) secara menyeluruh arsitektur portal digital terintegrasi ke dalam model **Single-File Deployment**[cite: 2]. Langkah taktis ini diambil guna memastikan sinkronisasi aset dinamis 100%, memangkas dependensi berkas eksternal yang rentan, serta mengamankan efisiensi perayapan (*crawlability*) mutlak dari sudut pandang Technical SEO.</p>
                 </div>
 
-                <!-- 2. Tantangan Teknis & Solusi -->
+                <!-- 2. Tantangan Teknis & Troubleshooting Log -->
                 <div class="case-study-box">
-                    <h3>🛠️ 2. Tantangan Teknis & Solusi (Case Study)[cite: 2]</h3>
+                    <h3>🛠️ 2. Dokumen Troubleshooting: Krisis Google Search Console & GitHub Pipeline</h3>
                     
                     <div>
-                        <h4>Kasus 1: Sinkronisasi Aset Gambar GitHub (CORS & Broken Links)[cite: 2]</h4>
+                        <h4>Kasus 1: Resolusi Kegagalan Tautan & Kebocoran Aset di GitHub (CORS Protection)[cite: 2]</h4>
                         <ul>
-                            <li><strong>Masalah:</strong> Menggunakan URL standar GitHub (<code>github.com/.../blob/...</code>) pada tag <code>&lt;img&gt;</code> menyebabkan gambar tidak muncul karena proteksi intermitten halaman HTML biasa[cite: 2].</li>
-                            <li><strong>Solusi:</strong> Mengonversi seluruh tautan mentah menjadi jalur distribusi CDN resmi GitHub (<code>https://raw.githubusercontent.com/</code>)[cite: 2].</li>
+                            <li><strong>Masalah:</strong> Tautan repositori konvensional menyebabkan kegagalan rendering visual aset internal akibat kendala intermitten pembatasan CORS halaman web biasa[cite: 2].</li>
+                            <li><strong>Solusi:</strong> Melakukan restrukturisasi total alur penulisan tag media dengan mengalihkan resolusi aset langsung ke simpul CDN mentah produksi[cite: 2]:</li>
+                        </ul>
+                        <div class="code-snippet">
+https://raw.githubusercontent.com/[user]/[repo]/[branch]/[asset.ext]
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4>Kasus 2: Penanganan 54+ Kegagalan Deployment & Isolasi Red Flag Repositori</h4>
+                        <ul>
+                            <li><strong>Masalah:</strong> <span class="badge-danger">CRITICAL ERROR</span> Terjadinya rentetan siklus kegagalan kompilasi dan otomatisasi penulisan skrip yang melebihi **54 kali kegagalan rilis (failed deployments)** berturut-turut. Hal ini memicu status *Red Flag* peringatan dari sistem GitHub Action akibat konsumsi sumber daya kompilasi yang tidak efisien dan konflik berkas dependensi.</li>
+                            <li><strong>Solusi:</strong> 
+                                1. Mengisolasi seluruh sub-modul pecah dan menyatukan logika struktur DOM ke dalam skrip asinkron murni.<br>
+                                2. Mematikan dependensi library eksternal berlebih dan menerapkan teknik pembungkusan *Virtual Layout System* berbasis CSS ID Selector.<br>
+                                3. Hasil: Pipa deployment kembali hijau, beban build berkurang hingga 80%, dan lolos verifikasi kepatuhan sistem audit keamanan GitHub.
+                            </li>
                         </ul>
                     </div>
 
                     <div>
-                        <h4>Kasus 2: Kompatibilitas Tata Letak Navigasi <em>Teal Integrated Bar</em>[cite: 2]</h4>
+                        <h4>Kasus 3: Sinkronisasi Tata Letak Multi-Layer Navigasi 3D (Z-Index Layering)[cite: 2]</h4>
                         <ul>
-                            <li><strong>Masalah:</strong> Memasang gambar latar belakang <code>etk_future.png</code> tepat di koordinat 0 tepi kiri, 0 atas, dan 0 bawah bar navigasi tanpa merusak elemen menu teks[cite: 2].</li>
-                            <li><strong>Solusi:</strong> Menerapkan sistem layer independen dengan CSS modern:[cite: 2]</li>
+                            <li><strong>Masalah:</strong> Bentrokan visual akibat penumpukan tumpang tindih elemen grafis tepi navigasi kiri (`etk_future.png`) dengan sistem menu dropdown interaktif yang menghalangi keterbacaan bot mesin pencari[cite: 2].</li>
+                            <li><strong>Solusi:</strong> Penerapan pembagian kontainer absolut terisolasi menggunakan arsitektur CSS modern:[cite: 2]</li>
                         </ul>
                         <div class="code-snippet">
-.header-bg-backdrop-layer {
+.navbar-edge-image {
     position: absolute;
     left: 0; top: 0; bottom: 0;
-    width: 450px;
-    z-index: 1;
-}[cite: 2]
+    height: 100%;
+    z-index: 2; /* Di atas latar belakang utama, di bawah interaksi teks */
+}
                         </div>
                     </div>
                 </div>
@@ -766,7 +692,7 @@
     <!-- GLOBAL FOOTER -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 ETK Global. All Rights Reserved. Portal Resmi Pelatihan Bahasa Inggris Korporat[cite: 1].</p>
+            <p>&copy; 2026 ETK Global. All Rights Reserved. Portofolio Resmi Divisi Rekayasa SEO & Web Production Global.</p>
         </div>
     </footer>
 
